@@ -1,0 +1,43 @@
+
+.auth-block {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  margin-top: 80px;
+}
+
+.auth-block #error {
+  color: red;
+  margin-bottom: 20px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.auth-block label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.auth-block input {
+  display: block;
+  margin: 5px 0 35px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.auth-block button {
+  width: 300px;
+  height: 50px;
+  background-color: #7272bb;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.auth-block button:hover {
+  background-color: #5050be;
+}

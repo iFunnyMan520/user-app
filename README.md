@@ -22,13 +22,17 @@ git clone https://github.com/iFunnyMan520/user-app
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
+
+# If you have a PostgreSQL server on a port other than '5432'
+export DB_PORT = your_port
+
 pytest -s -v --pdb
 ```
 
 
 ### Run Project
 ```bash
-chmod -x ./run_server.py
+chmod +x ./run_server.py
 
 # run server
 ./run_server.py

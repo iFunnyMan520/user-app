@@ -1,0 +1,76 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+<div class="new-user-block non-active">
+  <div class="auth-block">
+    <i class="fas new-user-fas fa-times"></i>
+    <h2 id="error"></h2>
+    <label for="">First Name</label>
+    <input type="text" name="first-name" id="first-name">
+    <label for="">Last Name</label>
+    <input type="text" name="last-name" id="last-name">
+    <label for="">Email</label>
+    <input type="email" name="email" id="email">
+    <label for="">Password</label>
+    <input type="password" name="password" id="password">
+    <input type="checkbox" name="superadmin" id="superadmin"> Admin
+    <button id="send">Send</button>
+  </div>
+</div>
+<div class="edit-block non-active">
+  <div class="auth-block">
+    <i class="fas edit-fas fa-times"></i>
+    <h2 id="error"></h2>
+    <label for="">First Name</label>
+    <input type="text" name="first-name" id="first-name">
+    <label for="">Last Name</label>
+    <input type="text" name="last-name" id="last-name">
+    <label for="">Email</label>
+    <input type="email" name="email" id="email">
+    <input type="checkbox" name="superadmin" id="superadmin"> Admin
+    <button id="send">Send</button>
+  </div>
+</div>
+<div class="self-block">
+  {% if current_user.superuser %}
+  <button class="new-user">Create</button>
+  {% else %}
+  <button disabled class="new-user">Create</button>
+  {% endif %}
+  <button class="logout">Logout</button>
+</div>
+<table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Admin</th>
+        <th></th>
+        <th></th>
+      </tr>
+    {% for user in users %}
+      <tr id="{{ user.id }}">
+        <td class='first-name'>{{user.first_name}}</td>
+        <td class='last-name'>{{user.last_name}}</td>
+        <td class='email'>{{user.email}}</td>
+        <td class='admin' style="text-align: center;">
+            {% if user.superuser %}
+                <i class="fas fa-check"></i>
+            {% endif %}
+        </td>
+        {% if current_user.superuser %}
+        <td><button class="edit">Edit</button></td>
+        <td><button class="delete">Delete</button></td>
+        {% else %}
+        <td><button disabled class="edit">Edit</button></td>
+        <td><button disabled class="delete">Delete</button></td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+
+    </table>
+{% endblock %}
+{% block script %}
+<script>
+  {% include 'pages/users/script.js' %}
+</script>
+{% endblock %}

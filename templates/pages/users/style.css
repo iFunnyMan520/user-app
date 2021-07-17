@@ -1,0 +1,117 @@
+.edit-block, .new-user-block {
+  height: 100vh;
+}
+
+.fa-times {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.non-active {
+  display: none;
+}
+
+.self-block {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.self-block button {
+  padding: 5px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.self-block .new-user {
+  background-color: #008500;
+}
+
+.self-block .new-user:hover {
+  background-color: #006300;
+}
+
+.self-block .logout {
+  background-color: #df9902;
+}
+
+.self-block .logout:hover {
+  background-color: #9e6c00;
+}
+
+table {
+  margin-top: 15px;
+  width: 100%;
+}
+
+table th {
+  background-color: #b1b1b1;
+  height: 25px;
+}
+
+table th:nth-child(1) {
+  width: 15%;
+}
+
+table th:nth-child(2) {
+  width: 15%;
+}
+
+table th:nth-child(3) {
+  width: 30%;
+}
+
+table th:nth-child(4) {
+  width: 10%;
+}
+
+table th:nth-child(5) {
+  width: 15%;
+}
+
+table td {
+  height: 30px;
+  padding: 5px;
+}
+
+table td i {
+  color: #2c2cd1;
+  font-size: 18px;
+}
+
+table td button {
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table td .edit {
+  background-color: #000cb9;
+}
+
+table td .edit:hover {
+  background-color: #090085;
+}
+
+table td .delete {
+  background-color: #fa5757;
+}
+
+table td .delete:hover {
+  background-color: #fd0000;
+}
+
+button:disabled {
+  background-color: #c2c2c2 !important;
+  cursor: auto;
+}
+
+button:disabled:hover {
+  background-color: #c2c2c2 !important;
+}

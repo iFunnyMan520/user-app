@@ -1,0 +1,23 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+<div class="auth-block">
+  <h2 id="error"></h2>
+  <label for="">First Name</label>
+  <input type="text" name="first-name" id="first-name">
+  <label for="">Last Name</label>
+  <input type="text" name="second-name" id="last-name">
+  <label for="">Email</label>
+  <input type="email" name="email" id="email">
+  <label for="">Password</label>
+  <input type="password" name="password" id="password">
+  <input type="checkbox" name="superadmin" id="superadmin"> Admin
+  <button id="send">Send</button>
+  <a href="{{ url_for('login') }}">Login</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+  {% include 'pages/signIn/script.js' %}
+</script>
+{% endblock %}
